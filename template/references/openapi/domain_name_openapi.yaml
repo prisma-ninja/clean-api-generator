@@ -1,0 +1,116 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: <DOMAIN_NAME>
+  description: openapi documentation
+
+servers:
+  - url: http://127.0.0.1:18080
+
+tags:
+  - name: <domainName>
+    description: Manage <domainName>s
+
+paths:
+  /<domainName>s:
+    get:
+      tags:
+        - <domainName>s
+      operationId: get<DomainName>s
+      description: Returns the list of all <domainName>s
+      responses:
+        "200":
+          description: Request was successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/<DomainName>"
+        "400":
+          description: Invalid input
+
+    post:
+      tags:
+        - <domainName>s
+      operationId: create<DomainName>
+      description: Creates a new <domainName>
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Input<DomainName>"
+      responses:
+        "201":
+          description: <DomainName> created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/<DomainName>"
+        "400":
+          description: Invalid input
+        "409":
+          description: <DomainName> already exists
+
+  /<domainName>s/{<domainName>Id}:
+    get:
+      tags:
+        - <domainName>s
+      operationId: get<DomainName>
+      description: Returns a <domainName> identified by its id
+      parameters:
+        - name: <domainName>Id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/<DomainName>"
+        "404":
+          description: <DomainName> not found
+
+    delete:
+      tags:
+        - <domainName>s
+      operationId: delete<DomainName>
+      description: Deletes a <domainName> identified by its id
+      parameters:
+        - name: <domainName>Id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: <DomainName> deleted successfully
+        "404":
+          description: <DomainName> not found
+
+components:
+  schemas:
+    Input<DomainName>:
+      type: object
+      properties:
+        xx:
+          type: string
+          description: xx <domainName>
+    <DomainName>:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: ID of the <domainName>
+        xx:
+          type: string
+          description: xx <domainName>
+    <DomainName>Array:
+      type: array
+      items:
+        $ref: "#/components/schemas/<DomainName>"
