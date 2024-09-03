@@ -1,0 +1,99 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: <DOMAIN_NAME>
+  description: openapi documentation
+
+servers:
+  - url: http://127.0.0.1:18080
+
+tags:
+  - name: <domainName><TargetName>s
+    description: Manage <targetName>s of a <domainName>
+
+paths:
+  /<domainName>s/{<domainName>Id}/<targetName>s:
+    get:
+      tags:
+        - <domainName><TargetName>s
+      operationId: get<DomainName><TargetName>s
+      description : Returns the list of all <targetName>s of the <domainName>
+      parameters:
+        - name: <domainName>Id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Request was successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/<TargetName>Id"
+        "400":
+          description: Invalid input
+  
+    post:
+      tags:
+        - <domainName><TargetName>s
+      operationId: link<DomainName><TargetName>
+      description: Links the <targetName> to the <domainName>
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Input<TargetName>Id"
+      responses:
+        "201":
+          description: <TargetName> lnked successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/<DomainName>"
+        "400":
+          description: Invalid input
+        "409":
+          description: <TargetName> already linked
+
+  /<domainName>s/{<domainName>Id}/<targetName>s/{<targetName>Id}:
+    delete:
+      tags:
+        - <domainName><TargetName>s
+      operationId: unlink<DomainName><TargetName>
+      description: Unlink a <targetName> from a <domainName>
+      parameters:
+        - name: <domainName>Id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: <targetName>Id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: <TargetName> unlinked successfully
+        "404":
+          description: <TargetName> or <DomainName> not found
+
+
+components:
+  schemas:
+    Input<TargetName>Id:
+      type: object
+      properties:
+        id:
+          type: string
+          description: <targetName> id
+    <TargetName>Id:
+      type: object
+      properties:
+        <targetName>Id:
+          type: string
+          description: id of the <targetName>

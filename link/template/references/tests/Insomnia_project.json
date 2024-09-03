@@ -1,0 +1,199 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2024-05-06T20:02:54.768Z",
+    "__export_source": "insomnia.desktop.app:v9.1.0",
+    "resources": [
+      {
+        "_id": "req_6123253eb5a64c31adee0528fac0bee5",
+        "parentId": "fld_b7437e4686f9451a8ef7ec63ccf56837",
+        "modified": 1715025489794,
+        "created": 1715025428626,
+        "url": "127.0.0.1:18080/<domainName>s/1",
+        "name": "/<domainName>s/1",
+        "description": "",
+        "method": "DELETE",
+        "body": {},
+        "preRequestScript": "",
+        "parameters": [],
+        "headers": [
+          {
+            "name": "User-Agent",
+            "value": "insomnia/9.1.0"
+          }
+        ],
+        "authentication": {},
+        "metaSortKey": -1715025428626,
+        "isPrivate": false,
+        "pathParameters": [],
+        "settingStoreCookies": true,
+        "settingSendCookies": true,
+        "settingDisableRenderRequestBody": false,
+        "settingEncodeUrl": true,
+        "settingRebuildPath": true,
+        "settingFollowRedirects": "global",
+        "_type": "request"
+      },
+      {
+        "_id": "fld_b7437e4686f9451a8ef7ec63ccf56837",
+        "parentId": "wrk_scratchpad",
+        "modified": 1715025355557,
+        "created": 1715025264779,
+        "name": "<DomainName>s",
+        "description": "",
+        "environment": {},
+        "environmentPropertyOrder": null,
+        "metaSortKey": -1715025264779,
+        "_type": "request_group"
+      },
+      {
+        "_id": "req_9b5c0e85a9f841f4b5941291f2154de0",
+        "parentId": "fld_b7437e4686f9451a8ef7ec63ccf56837",
+        "modified": 1715025305372,
+        "created": 1715025093012,
+        "url": "127.0.0.1:18080/<domainName>s",
+        "name": "/<domainName>s",
+        "description": "",
+        "method": "POST",
+        "body": {
+          "mimeType": "application/json",
+          "text": "{\n  \"xx\": \"xx\"\n}"
+        },
+        "preRequestScript": "",
+        "parameters": [],
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "name": "User-Agent",
+            "value": "insomnia/9.1.0"
+          }
+        ],
+        "authentication": {},
+        "metaSortKey": -1715025292326,
+        "isPrivate": false,
+        "pathParameters": [],
+        "settingStoreCookies": true,
+        "settingSendCookies": true,
+        "settingDisableRenderRequestBody": false,
+        "settingEncodeUrl": true,
+        "settingRebuildPath": true,
+        "settingFollowRedirects": "global",
+        "_type": "request"
+      },
+      {
+        "_id": "req_109af0e61c5c4ee6839472ec0d3a6901",
+        "parentId": "fld_b7437e4686f9451a8ef7ec63ccf56837",
+        "modified": 1715025301199,
+        "created": 1715025073759,
+        "url": "127.0.0.1:18080/<domainName>s",
+        "name": "/<domainName>s",
+        "description": "",
+        "method": "GET",
+        "body": {},
+        "preRequestScript": "",
+        "parameters": [],
+        "headers": [
+          {
+            "name": "User-Agent",
+            "value": "insomnia/9.1.0"
+          }
+        ],
+        "authentication": {},
+        "metaSortKey": -1715025292226,
+        "isPrivate": false,
+        "pathParameters": [],
+        "settingStoreCookies": true,
+        "settingSendCookies": true,
+        "settingDisableRenderRequestBody": false,
+        "settingEncodeUrl": true,
+        "settingRebuildPath": true,
+        "settingFollowRedirects": "global",
+        "_type": "request"
+      },
+      {
+        "_id": "req_b7a180a3be134b319966d46fe28d19f2",
+        "parentId": "fld_b7437e4686f9451a8ef7ec63ccf56837",
+        "modified": 1715025292165,
+        "created": 1715025166808,
+        "url": "127.0.0.1:18080/<domainName>s/1",
+        "name": "/<domainName>s/1",
+        "description": "",
+        "method": "GET",
+        "body": {},
+        "preRequestScript": "",
+        "parameters": [],
+        "headers": [
+          {
+            "name": "User-Agent",
+            "value": "insomnia/9.1.0"
+          }
+        ],
+        "authentication": {},
+        "metaSortKey": -1715025292126,
+        "isPrivate": false,
+        "pathParameters": [],
+        "settingStoreCookies": true,
+        "settingSendCookies": true,
+        "settingDisableRenderRequestBody": false,
+        "settingEncodeUrl": true,
+        "settingRebuildPath": true,
+        "settingFollowRedirects": "global",
+        "_type": "request"
+      },
+      {
+        "_id": "req_96616be17a264d75bf49b7273f985718",
+        "parentId": "wrk_scratchpad",
+        "modified": 1715024789794,
+        "created": 1714906474200,
+        "url": "127.0.0.1:18080/health",
+        "name": "/health",
+        "description": "",
+        "method": "GET",
+        "body": {},
+        "preRequestScript": "",
+        "parameters": [],
+        "headers": [
+          {
+            "name": "User-Agent",
+            "value": "insomnia/9.1.0"
+          }
+        ],
+        "authentication": {},
+        "metaSortKey": -1714906474200,
+        "isPrivate": false,
+        "pathParameters": [],
+        "settingStoreCookies": true,
+        "settingSendCookies": true,
+        "settingDisableRenderRequestBody": false,
+        "settingEncodeUrl": true,
+        "settingRebuildPath": true,
+        "settingFollowRedirects": "global",
+        "_type": "request"
+      },
+      {
+        "_id": "env_99d30891da4bdcebc63947a8fc17f076de878684",
+        "parentId": "wrk_scratchpad",
+        "modified": 1714906456107,
+        "created": 1714906456107,
+        "name": "Base Environment",
+        "data": {},
+        "dataPropertyOrder": null,
+        "color": null,
+        "isPrivate": false,
+        "metaSortKey": 1714906456107,
+        "_type": "environment"
+      },
+      {
+        "_id": "jar_99d30891da4bdcebc63947a8fc17f076de878684",
+        "parentId": "wrk_scratchpad",
+        "modified": 1714906456109,
+        "created": 1714906456109,
+        "name": "Default Jar",
+        "cookies": [],
+        "_type": "cookie_jar"
+      }
+    ]
+  }
